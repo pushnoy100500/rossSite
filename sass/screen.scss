@@ -4,3 +4,148 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 /*@import "compass/reset";*/
+
+$text-color: #3c393e;
+$nav-color: #fff;
+$nav-hover-color: #9d9d9d;
+$orange: #ff8503;
+$gray-text:  #838993;
+$gray-bg: #e9eaec;
+$border-color:  #a5aab4;
+
+body {
+  color: $text-color;
+  .navigation {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    color: $nav-color;
+    .navbar-brand {
+      color: $nav-color;
+      &:hover {
+        color: $nav-hover-color;
+      }
+    }
+  }
+
+  .company-brief {
+    padding-bottom: 25px;
+    .company-name {
+      color: $orange;
+      text-align: center;
+      font-size: 3em;
+      span {
+        font-weight: lighter;
+      }
+    }
+    .company-contacts {
+      text-align: left;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: $gray-text;
+      h3 {
+        font-size: 1.2em;
+
+      }
+      p {
+        font-size: 0.9em;
+        font-weight: bold;
+      }
+    }
+  }
+
+/* index page specific styles */
+  .image-slider {
+    .carousel-inner {
+      .item {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .company-services {
+    padding-top: 50px;
+    text-align: center;
+    .serv {
+      font-size: 90%;
+      padding: 20px;
+      span {
+        font-weight: lighter;
+      }
+      a {
+          color: $orange;
+      }
+    }
+    $i: 1;
+    @while $i < 4 {
+      .service#{$i} {
+        border-right: 1px dotted $border-color;
+      }
+      @if $i == 1 {
+        .service#{$i} {
+          text-align: left;
+        }
+      }
+      $i: $i + 1;
+    }
+    @media screen and (max-width: 991px) {
+      .service1, .service2, .service3 {
+        border: none;
+      }
+    }
+  }
+
+/* products page specific styles */
+  .welding-products {
+    background-color: $gray-bg;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    h2 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .welding-pic {
+      img {
+        width: 90%;
+        margin-top: 40px;
+        height: auto;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .welding-features {
+      padding-top: 30px;
+      ul {
+        list-style-type: none;
+        li {
+          overflow: auto;
+          img {
+            float: left;
+            margin-top: 25px;
+            width: 10%;
+            height: auto;
+          }
+          .feature-descr {
+            display: inline;
+            float: right;
+            width: 80%;
+            margin-top: 10px;
+            h4 {
+              margin-top: 0px;
+            }
+            p {
+              font-weight: lighter;
+              font-size: 1.2em;
+              margin-right: 5px;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
