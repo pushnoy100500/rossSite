@@ -14,6 +14,10 @@ $gray-bg: #e9eaec;
 $border-color:  #a5aab4;
 
 body {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   color: $text-color;
   .navigation {
     padding-top: 5px;
@@ -94,6 +98,180 @@ body {
     @media screen and (max-width: 991px) {
       .service1, .service2, .service3 {
         border: none;
+      }
+    }
+  }
+  .needs {
+    background-image: url('../images/bg_1.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    height: auto;
+    .needs-text {
+      padding-top: 80px;
+      text-align: center;
+      h3 {
+        font-weight: lighter;
+      }
+    }
+    .need-imgs {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      .need-img {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        img {
+          display: block;
+          border-radius: 1000px;
+          border-style: solid;
+          border-width: 5px;
+          padding: 2px;
+          border-color: rgba(255,255,255,0.3);
+          margin:auto;
+          width: 90%;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  .profile {
+    background-color: #e9eaec;
+    padding-bottom: 100px;
+    .profile-top {
+      border-bottom: 2px solid #9d9d9d;
+      .btns {
+        padding: 5px;
+      }
+    }
+    #customNav {
+      overflow: auto;
+      padding-left: 10%;
+
+      margin-bottom: 5px;
+      .owl-prev {
+        border-radius: 10px 0px 0px 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        float: left;
+        padding: 7px;
+        border: 1px solid #9d9d9d;
+
+      }
+      .owl-next {
+        border-radius: 0px 10px 10px 0px;
+        margin-top: 10px;
+        margin-left: 5px;
+        cursor: pointer;
+        float: left;
+        padding: 7px;
+        border: 1px solid #9d9d9d;
+      }
+    }
+    .owl-carousel {
+      margin-top: 10px;
+      .item {
+        margin: 15px;
+        box-shadow: 5px 2px 12px 0px  rgba(107,103,107,1);
+        .item-caption {
+          text-align: center;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .workmanship {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    height: 400px;
+    background-image: url('../images/bg_2.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    h3 {
+      font-style: italic;
+    }
+    p {
+      font-size: 110%;
+      font-weight: lighter;
+    }
+  }
+  .feedbacks {
+    padding-top: 70px;
+    background: #fff;
+    .feedback {
+      position: relative;
+      background-color: #e9eaec;
+      quotes: none;
+      padding: 0px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 1px;
+      border-left: none;
+      font-size: 0.85em;
+      color: #71757d;
+      padding: 40px 30px 40px 40px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 15px 0;
+        border-color: #e9eaec transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        bottom: -20px;
+        left: 47%;
+      }
+      .who {
+        font-weight: bold;
+        color: #000;
+        font-size: 1.5em;
+      }
+      .our-customer {
+        font-style: italic;
+      }
+    }
+    .col-md-4 {
+      .customer-pic {
+        border-radius: 150px;
+        display: block;margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .companies {
+    padding: 40px;
+    background-color: #e9eaec;
+    img {
+      display: block;
+      margin: auto;
+    }
+
+  }
+  .footer {
+    background-image: url('../images/bg_3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .link {
+      color: #fff;
+      &:hover {
+        color: $orange;
       }
     }
   }
